@@ -34,7 +34,7 @@ jobs:
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
           project-file: './Database2.sqlproj'
           build-arguments: '-c Release'                 # Optional arguments passed to dotnet build
-          arguments: '/p:DropObjectsNotInSource=false'  
+          arguments: '/p:VisualStudioVersion=12.0' 
           #dacpac-package: './Database2.dacpac'
           #sql-file: 'test.sql'
           
