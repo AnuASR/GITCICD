@@ -32,7 +32,7 @@ jobs:
         with:
           server-name: srdbgitasr.database.windows.net
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
-          project-file: 'Database2.sqlproj'
+          project-file: './Database2.sqlproj'
           build-arguments: '-c Release'                 # Optional arguments passed to dotnet build
           arguments: '/p:DropObjectsNotInSource=false'  
           #dacpac-package: './Database2.dacpac'
