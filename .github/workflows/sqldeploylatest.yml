@@ -28,13 +28,13 @@ jobs:
       - uses: azure/login@v1
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
-      - uses: azure/sql-action@v1.2
+      - uses: azure/sql-action@v1.1
         with:
           server-name: srdbgitasr.database.windows.net
           connection-string: ${{ secrets.AZURE_SQL_CONNECTION_STRING }}
           project-file: './Database2.sqlproj'
           build-arguments: '-c Release'                 # Optional arguments passed to dotnet build
-          arguments: '/p:VisualStudioVersion=12.0' 
+          arguments: '/p:DropObjectsNotInSource=true'
           #dacpac-package: './Database2.dacpac'
           #sql-file: 'test.sql'
           
